@@ -23,5 +23,12 @@ jobs:
 
           script: |
             echo "hello"
+            cd Github-Action-Guide-for-a-ReactJS-Project
+            git fetch origin master
+            git reset --hard origin/master
+
+            docker build -t react-app .
+            docker tag react-app saad/app
+            docker run -d --name react-application -p 5173:5173
             
       
