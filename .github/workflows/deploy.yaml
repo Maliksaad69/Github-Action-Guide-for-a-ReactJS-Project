@@ -1,5 +1,4 @@
 name: CICD deployment
-
 on:
   push: 
     branches:
